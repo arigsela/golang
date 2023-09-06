@@ -6,6 +6,7 @@ import (
 )
 
 // Declaring a structure (class)
+// Declaring with capital leter makes it accessable from outside the package
 type User struct {
 	FirstName   string
 	LastName    string
@@ -14,11 +15,14 @@ type User struct {
 	BirthDate   time.Time
 }
 
+// declaring with lowercase means its private
+var special name
+
 func main() {
 	user := User{
 		FirstName: "Ari",
 		LastName:  "Sela",
 	}
 
-	log.Println(user.FirstName)
+	log.Println(user.FirstName, "Birthdate", user.BirthDate)
 }
